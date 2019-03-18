@@ -1,0 +1,2 @@
+compiler: gcc
+module: gcc/5.4.0

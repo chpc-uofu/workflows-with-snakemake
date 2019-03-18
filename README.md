@@ -9,7 +9,7 @@ another SLURM cluster running Linux where snakemake, fastqc, and multiqc are
 available) and clone the repository with the commands:
 
 `
-module load git-lfs
+module load git-lfs;
 git clone https://gitlab.chpc.utah.edu/bmilash/workflows-with-snakemake.git
 `
 

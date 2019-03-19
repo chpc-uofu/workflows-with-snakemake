@@ -8,18 +8,21 @@ command-line arguments:
 ```
 snakemake -s your_snakefile \
 	--cluster-config your_cluster_config_file \
-	--cluster "sbatch -p {cluster.partition} -A {cluster.account }" \
+	--cluster "sbatch -M lonepeak --res=snakemake2019 -p {cluster.partition} -A {cluster.account }" \
 	--jobs N
 ```
 where "N" is the maximum number of concurrent jobs you want to run.
 (Hint: Because this snakemake command is getting long and unwieldy I tend to
-put it in a little shell script.)
+put it in a shell script.)
 
-Execute your workflow using the snakemake command above.
+Feel free to use the snakefile, cluster configuration, and shell script
+provided in the solutions directory.
+
+Execute your workflow using the snakemake command provided in the shell script.
 
 Its interesting to monitor your jobs from another terminal window with 
 the command:
 
-`squeue -i 3 -u $USER -o "%.6i %.10P %.7a %.20j %.2t %.6M %R"`
+`squeue -M all -i 3 -u $USER -o "%.6i %.10P %.7a %.20j %.2t %.6M %R"`
 
 When you're done monitoring, just type <control>C to stop the squeue process.

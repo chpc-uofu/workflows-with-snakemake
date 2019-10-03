@@ -1,10 +1,6 @@
 # ex1-3.snakefile - really complete snakefile for exercise 1.
 configfile: "config3.yaml"
 
-# Configure the shell, in case we use some bash-isms in our rules
-# and the user is using tcsh.
-shell.executable("/bin/bash")
-
 rule greet:
 	message: "Rule {rule}: Running program {output}."
 	output: "greeting.txt"

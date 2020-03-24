@@ -1,13 +1,20 @@
-# Snakefile.fancy - another solution for exercise 1
+# Snakefile - a solution for exercise 2
+
+locations = [ 
+	"Aleknagik_1_NNE",
+	"King_Salmon_42_SE",
+	"Fairbanks_11_NE",
+	"Sitka_1_NE",
+]
 
 rule plot_data:
-	input: header="HEADERS.txt", data="CRND0103-2020-AK_Aleknagik_1_NNE.txt"
+	input: header="HEADERS.txt", data=expand("CRND0103-2020-AK_{location}.txt",location=locations)
 	message: "Plotting data."
 	output: "Rplot001.png"
 	shell: "module load R; Rscript plot_files.r {input.header} {input.data}"
 
 rule download_data:
-	output: "CRND0103-2020-AK_Aleknagik_1_NNE.txt"
+	output: "CRND0103-2020-AK_{location}.txt"
 	message: "Downloading data file {output}."
 	shell: "wget https://www1.ncdc.noaa.gov/pub/data/uscrn/products/daily01/2020/{output}"
 
@@ -18,4 +25,4 @@ rule download_header:
 
 rule clean:
 	message: "Cleaning up."
-	shell: "rm -f HEADERS.txt CRND0103-2020-AK_Aleknagik_1_NNE.txt Rplot001.png"
+	shell: "rm -f HEADERS.txt CRND0103-2020-AK_*.txt Rplot001.png"

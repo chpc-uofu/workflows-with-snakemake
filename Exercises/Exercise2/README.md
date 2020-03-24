@@ -18,7 +18,6 @@ locations = [
 	"Sitka_1_NE",
 ]
 
-
 Then use those locations as arguments to the expand() function.
 
 To execute your snakemake, try the commands:

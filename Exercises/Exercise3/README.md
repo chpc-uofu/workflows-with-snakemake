@@ -23,4 +23,5 @@ by the individual slurm jobs.
 
 Its fun to watch your jobs in motion by opening a separate terminal 
 window and executing the command "watch -n 3 squeue -M all -u $LOGNAME".
-
+When you're done watching jobs you can interrupt the watch command by typing 
+control-C.

@@ -1,7 +1,0 @@
-# cluster.yaml - cluster configuration for Snakefile.rnaseq
-__default__:
-    name: lonepeak
-    partition: lonepeak
-    account: chpc
-    time: 1:00:00
-    nodes: 1

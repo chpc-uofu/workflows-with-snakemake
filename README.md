@@ -5,11 +5,11 @@ exercises for the Workflows with Snakemake presentation, presented by
 Brett Milash of the Center for High Performance Computing, University of Utah.
 
 To complete these exercises, log in to your CHPC account (or an account on
-another SLURM cluster running Linux where snakemake, fastqc, and multiqc are
-available) and clone the repository with the commands:
+another SLURM cluster running Linux where snakemake and R are available)
+and clone the repository with the commands:
 
 `
-module load git-lfs;
+module load git
 git clone https://gitlab.chpc.utah.edu/bmilash/workflows-with-snakemake.git
 `
 

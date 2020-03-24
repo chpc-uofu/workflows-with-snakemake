@@ -1,15 +1,6 @@
-# Exercise 2 - Workflow using a wildcard
+# Solution to Exercise 2 - Workflow using a wildcard
 
-Modify your Snakefile from Exercise 1 (or use one of the Snakefiles from
-the Exercise1 solutions folder) so that your workflow can download
-data for several different locations such that those locations are not
-hard-coded as the inputs or outputs of rules. This will require use of the 
-snakemake expand() function.
-
-The easiest way to do this is to provide expand() with a list of values
-to work with in your Snakefile. Just copy and paste this list of locations
-into the top of your Snakefile:
-
+With the locations copied into our Snakefile:
 
 locations = [ 
 	"Aleknagik_1_NNE",
@@ -18,10 +9,8 @@ locations = [
 	"Sitka_1_NE",
 ]
 
+use those locations as arguments to the expand() function as the input
+to a rule.
 
-Then use those locations as arguments to the expand() function.
-
-To execute your snakemake, try the commands:
-* snakemake -n
-* snakemake
-
+Note that the use of wildcards impacts multiple rules: the rule where 
+expand() as well as rules upstream of that rule.

@@ -24,4 +24,9 @@ Then use those locations as arguments to the expand() function.
 To execute your snakemake, try the commands:
 * snakemake -n
 * snakemake
+* snakemake -j 3	(this will execute up to 3 tasks in parallel)
+
+Generate the rule graph and directed acyclic graph outputs:
+* snakemake --rulegraph | dot -Tpng > rulegraph.png
+* snakemake --dag | dot -Tpng > dag.png
 

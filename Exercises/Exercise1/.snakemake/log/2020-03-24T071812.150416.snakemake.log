@@ -1,0 +1,16 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	download_header
+	1
+
+[Tue Mar 24 07:18:12 2020]
+Job 0: Downloading header file HEADERS.txt.
+
+[Tue Mar 24 07:18:12 2020]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /uufs/chpc.utah.edu/common/home/u0424091/LectureSeries/Current/workflows-with-snakemake/Exercises/Exercise1/.snakemake/log/2020-03-24T071812.150416.snakemake.log

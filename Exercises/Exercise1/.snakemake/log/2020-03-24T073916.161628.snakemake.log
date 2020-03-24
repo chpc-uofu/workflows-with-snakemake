@@ -1,0 +1,39 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	download_data
+	1	download_header
+	1	plot_data
+	3
+
+[Tue Mar 24 07:39:16 2020]
+rule download_header:
+    output: HEADERS.txt
+    jobid: 1
+
+[Tue Mar 24 07:39:16 2020]
+Finished job 1.
+1 of 3 steps (33%) done
+
+[Tue Mar 24 07:39:16 2020]
+rule download_data:
+    output: CRND0103-2020-AK_Aleknagik_1_NNE.txt
+    jobid: 2
+
+[Tue Mar 24 07:39:16 2020]
+Finished job 2.
+2 of 3 steps (67%) done
+
+[Tue Mar 24 07:39:16 2020]
+rule plot_data:
+    input: HEADERS.txt, CRND0103-2020-AK_Aleknagik_1_NNE.txt
+    output: Rplot001.png
+    jobid: 0
+
+[Tue Mar 24 07:39:19 2020]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /uufs/chpc.utah.edu/common/home/u0424091/LectureSeries/Current/workflows-with-snakemake/Exercises/Exercise1/.snakemake/log/2020-03-24T073916.161628.snakemake.log

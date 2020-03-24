@@ -1,0 +1,2 @@
+SyntaxError in line 4 of /uufs/chpc.utah.edu/common/home/u0424091/LectureSeries/Current/workflows-with-snakemake/Exercises/Exercises/Snakefile:
+EOF in multi-line string (Snakefile, line 4)

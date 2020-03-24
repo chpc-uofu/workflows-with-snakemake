@@ -19,8 +19,8 @@ find the exercise files and solutions.
 # Prerequisites
 
 Students in this course should have:
-* a CHPC account
-* some familiarity with the shell command line and shell scripting
-* the ability to use a text editor
-* some familiarity with python
-* familiarity with SLURM commands for submitting jobs to a cluster
+* a CHPC account.
+* taken our Intro to Linux course.
+* the ability to use a text editor.
+* some familiarity with python.
+* familiarity with SLURM commands for submitting jobs to a cluster.

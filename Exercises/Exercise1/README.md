@@ -19,8 +19,9 @@ https://www1.ncdc.noaa.gov/pub/data/uscrn/products/daily01/2020/CRND0103-2020-AK
 This step also doesn't have any input.
 
 Step 3: Use the provided R script "plot_files.r" to plot the data into a PNG
-file. The command you need to run is:
-	module load R; Rscript plot_files.r HEADERS.txt CRND0103-2020-AK_Aleknagik_1_NNE.txt
+file. The commands you need to run are:
+> module load R
+> Rscript plot_files.r HEADERS.txt CRND0103-2020-AK_Aleknagik_1_NNE.txt
 The output of this statement will be the PNG file "Rplot001.png".
 The input for this step is the output from the other two steps.
 
@@ -32,7 +33,7 @@ get that working. Then add another step, and so on.
 
 To execute your snakemake, first run "module load snakemake/5.6.0". Then,
 try the commands:
-* snakemake -n
-* snakemake
+> snakemake -n
+> snakemake
 
 Once your workflow runs successfully, try those commands again.

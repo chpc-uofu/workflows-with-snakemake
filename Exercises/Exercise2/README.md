@@ -10,22 +10,29 @@ The easiest way to do this is to provide expand() with a list of values
 to work with in your Snakefile. Just copy and paste this list of locations
 into the top of your Snakefile:
 
-
+```bash
 locations = [ 
 	"Aleknagik_1_NNE",
 	"King_Salmon_42_SE",
 	"Fairbanks_11_NE",
 	"Sitka_1_NE",
 ]
+```
 
 Then use those locations as arguments to the expand() function.
 
 To execute your snakemake, try the commands:
-* snakemake -n
-* snakemake
-* snakemake -j 3	(this will execute up to 3 tasks in parallel)
+
+```bash
+snakemake -n
+snakemake
+snakemake -j 3	(this will execute up to 3 tasks in parallel)
+```
 
 Generate the rule graph and directed acyclic graph outputs:
-* snakemake --rulegraph | dot -Tpng > rulegraph.png
-* snakemake --dag | dot -Tpng > dag.png
+
+```bash
+snakemake --rulegraph | dot -Tpng > rulegraph.png
+snakemake --dag | dot -Tpng > dag.png
+```
 

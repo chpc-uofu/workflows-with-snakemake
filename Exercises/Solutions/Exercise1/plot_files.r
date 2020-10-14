@@ -34,11 +34,12 @@ for ( datafile in args[-1] )
 	names(dataset)=headers
 
 	# Get the location name from the name of the file.
-	#location=strsplit(datafile,"_")[[1]][2]
 	location=tools::file_path_sans_ext(paste(strsplit(datafile,"_")[[1]][-1],collapse="_"))
-
-
+	# Add location name to the data set.
 	dataset$location=rep(location,dim(dataset)[1])
+
+	# Replace any missing T_DAILY_MAX values with the value NA.
+	dataset$T_DAILY_MAX[which(dataset$T_DAILY_MAX==-9999.0)]=NA
 
 	# Add an ordinal date column.
 	dataset$ordinal_date=convert_date(as.character(dataset$LST_DATE))

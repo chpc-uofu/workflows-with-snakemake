@@ -35,7 +35,7 @@ the rule that creates that output needs to be the first rule in your Snakefile.
 A good way to build a workflow like this is to start with a single step and
 get that working. Then add another step, and so on.
 
-To execute your snakemake, first run "module load snakemake/5.6.0". Then,
+To execute your snakemake, first run "module load snakemake/6.4.1". Then,
 try the commands:
 
 ```bash

@@ -26,7 +26,7 @@ To execute your snakemake, try the commands:
 ```bash
 snakemake -n
 snakemake
-snakemake -j 3	(this will execute up to 3 tasks in parallel)
+snakemake -j3	(this will execute up to 3 tasks in parallel)
 ```
 
 Generate the rule graph and directed acyclic graph outputs:

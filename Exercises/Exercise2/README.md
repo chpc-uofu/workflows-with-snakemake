@@ -25,7 +25,6 @@ To execute your snakemake, try the commands:
 
 ```bash
 snakemake -n
-snakemake
 snakemake -j3	(this will execute up to 3 tasks in parallel)
 ```
 
@@ -35,4 +34,6 @@ Generate the rule graph and directed acyclic graph outputs:
 snakemake --rulegraph | dot -Tpng > rulegraph.png
 snakemake --dag | dot -Tpng > dag.png
 ```
+
+You can display the .png files with the "display" command.
 

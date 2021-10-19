@@ -40,7 +40,8 @@ try the commands:
 
 ```bash
 snakemake -n
-snakemake
+snakemake -j1
 ```
 
 Once your workflow runs successfully, try those commands again.
+You can display the .png file with the "display" command.

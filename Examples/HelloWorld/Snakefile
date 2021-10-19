@@ -1,9 +1,11 @@
 rule link:
+	message: "Linking {input} to produce executable {output}."
 	input: "hello_world.o"
 	output: "hello_world"
 	shell: "gcc -o {output} {input}"
 
 rule compile:
+	message: "Compiling {input} to produce object file {output}."
 	input: c_file="hello_world.c", h_file="hello_world.h"
 	output: "hello_world.o"
 	shell: "gcc -c {input.c_file}"

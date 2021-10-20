@@ -13,4 +13,4 @@ use those locations as arguments to the expand() function as the input
 to a rule.
 
 Note that the use of wildcards impacts multiple rules: the rule where 
-expand() as well as rules upstream of that rule.
+expand() is used as well as rules upstream of that rule.

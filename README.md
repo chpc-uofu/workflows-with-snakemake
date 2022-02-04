@@ -8,7 +8,7 @@ To complete these exercises, log in to your CHPC account (or an account on
 another SLURM cluster running Linux where snakemake and R are available)
 and clone the repository with the commands:
 
-module load git; git clone https://gitlab.chpc.utah.edu/bmilash/workflows-with-snakemake.git
+module load git; git clone https://github.com/CHPC-UofU/workflows-with-snakemake.git
 
 That will create the "workflows-with-snakemake" directory, where you will 
 find the exercise files and solutions.

@@ -5,8 +5,8 @@
 # The "--latency-wait 30" argument tells snakemake to wait up to 30 seconds
 # after a job completes for the output files to become available.
 
-module load snakemake/6.4.1
+module load snakemake
 snakemake --cluster-config cluster.yaml \
 	--jobs 20 \
 	--cluster "sbatch -M {cluster.cluster} -A {cluster.account} -p {cluster.partition}" \
-	--latency-wait 30
+	--latency-wait 60

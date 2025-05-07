@@ -1,0 +1,29 @@
+locations = [
+	"Aleknagik_1_NNE",
+	"King_Salmon_42_SE",
+	"Fairbanks_11_NE",
+	"Sitka_1_NE",
+]
+
+rule plot_data:
+	message: "Creating the plot"
+	output: "Rplot001.png"
+	input: header="HEADERS.txt", data=expand("CRND0103-2020-AK_{location}.txt",location=locations)
+	shell: """
+		module load R
+		Rscript plot_files.r {input.header} {input.data}
+		"""
+
+# Make this rule download data for any location.
+rule download_data:
+	message: "Downloading {output}"
+	output: "CRND0103-2020-AK_{location}.txt"
+	shell: "wget https://www1.ncdc.noaa.gov/pub/data/uscrn/products/daily01/2020/{output}"
+
+#	Can also use wildcards.location in the shell section:
+#	shell: "wget https://www1.ncdc.noaa.gov/pub/data/uscrn/products/daily01/2020/CRND0103-2020-AK_{wildcards.location}.txt"
+	
+rule download_header:
+	message: "Downloading {output}"
+	output: "HEADERS.txt"
+	shell: "wget https://www1.ncdc.noaa.gov/pub/data/uscrn/products/daily01/HEADERS.txt"

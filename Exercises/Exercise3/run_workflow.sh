@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
-# run_workflow.sh - bash script to execute snakemake workflow on cluster.
-# The "--jobs 20" argument instructs snakemake to submit at most 20 concurrent
-# jobs to the cluster.
-# The "--latency-wait 30" argument tells snakemake to wait up to 30 seconds
-# after a job completes for the output files to become available.
+# run_workflow.sh - bash script to execute snakemake workflow on cluster
+# using snakemake version 9. This runs on the notchpeak cluster.
+# The --latency-wait flag is useful on file systems with high latency,
+# and tells snakemake to wait for N seconds for output files to appear.
 
-module load snakemake
-snakemake --cluster-config cluster.yaml \
-	--jobs 20 \
-	--cluster "sbatch -M {cluster.cluster} -A {cluster.account} -p {cluster.partition}" \
-	--latency-wait 60
+module load snakemake/9.3.3
+snakemake --workflow-profile profiles/notchpeak --latency-wait 20

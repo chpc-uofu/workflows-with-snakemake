@@ -1,7 +1,22 @@
-# cluster.yaml - cluster configuration for snakemake workflow.
+# cluster.yaml - cluster configuration for snakemake workflow for 
+# snakemake version 7 or earlier.
 __default__:
-        cluster: notchpeak
-        partition: notchpeak-shared-short
-        account: notchpeak-shared-short
-        nodes: 1
-        time: 00:10:00
+    partition: notchpeak-shared-guest
+    account: owner-guest
+    qos: notchpeak-guest
+    nodes: 1
+    time: 00:10:00
+
+download_header:
+    partition: notchpeak-dtn
+    qos: notchpeak-dtn
+    account: dtn
+    time: 00:05:00
+    ntasks: 1
+
+download_data:
+    partition: notchpeak-dtn
+    qos: notchpeak-dtn
+    account: dtn
+    time: 00:05:00
+    ntasks: 1

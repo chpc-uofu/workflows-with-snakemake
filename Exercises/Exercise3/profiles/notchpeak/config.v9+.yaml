@@ -1,0 +1,33 @@
+# config.v9+.yaml - configuration file for rnaseq-benchmark workflow
+# using snakemake version 9.
+
+executor: slurm
+jobs: 5
+
+default-resources:
+    mem_mb: 10000
+    slurm_account: owner-guest
+    slurm_partition: notchpeak-shared-guest
+    slurm_qos: notchpeak-quest
+    runtime: '10 m'
+
+set-threads:
+    download_header: 2
+    download_data: 2
+
+set-resources:
+    download_header:
+        slurm_partition: notchpeak-dtn
+        slurm_account: dtn
+        slurm_qos: notchpeak-dtn
+        runtime: '5 m'
+        ntasks: 1
+    
+    download_data:
+        slurm_partition: notchpeak-dtn
+        slurm_account: dtn
+        slurm_qos: notchpeak-dtn
+        slurm_name: download_genome
+        runtime: '5 m'
+        ntasks: 1
+

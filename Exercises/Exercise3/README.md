@@ -1,9 +1,16 @@
 # Exercise 3 - Running snakemake on a cluster
 
-Copy your Snakefile from Exercise 2 (or use the Snakefile from
-the Exercise2 solutions folder) into this directory, for execution with
+Copy your Snakefile from Exercise 2 into this directory, (or use the 
+provided Snakefile) for execution with
 the bash script run_workflow.sh. 
 
+Take a look at the profiles/notchpeak/config.v9+.yaml file. This profile
+sets the default resources to use on the cluster, and then 
+
+
+
+For older versions of snakemake (version 7 or earlier) the Slurm interface
+is different. The file cluster.yaml
 Take a look at the cluster.yaml file. Notice that it defines the cluster
 name, partition name, and account, along with the (very short) time that
 a job is allowed to run and the number of nodes per job.

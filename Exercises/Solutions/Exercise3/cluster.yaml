@@ -1,5 +1,7 @@
 # cluster.yaml - cluster configuration for snakemake workflow.
 __default__:
         cluster: notchpeak
-        partition: notchpeak-shared
-        account: chpc
+        partition: notchpeak-shared-short
+        account: notchpeak-shared-short
+        nodes: 1
+        time: 00:10:00

@@ -1,5 +1,4 @@
-# config.v9+.yaml - configuration file for rnaseq-benchmark workflow
-# using snakemake version 9.
+# config.v9+.yaml - example configuration file using snakemake version >= 9.
 
 executor: slurm
 jobs: 5
